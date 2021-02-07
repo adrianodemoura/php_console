@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Rodar\Database;
+namespace PhpConsole\Database;
 
 class Field {
 

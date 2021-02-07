@@ -17,5 +17,10 @@
         "issues": "https://github.com/adrianodemoura/php_console/issues",
         "source": "https://github.com/adrianodemoura/php_console"
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
 }

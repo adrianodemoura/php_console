@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Rodar\Console;
+namespace PhpConsole\Console;
 
 class Console {
 

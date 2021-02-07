@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
-namespace Rodar\Database;
-use Rodar\Database\Field;
+namespace PhpConsole\Database;
+use PhpConsole\Database\Field;
 use Exception;
 use PDO;
 
