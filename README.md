@@ -12,6 +12,20 @@ Execute o comando para criar o projeto
 $ vendor/adrianodemoura/php_console/bin/create_app.php
 ```
 
+Não esqueça de acrescentar as linhas no seu composer.json
+```
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/",
+            "PhpConsole\\": "vendor/adrianodemoura/php_console/src/"
+        }
+    }
+```   
+e executar:
+```
+$ composer dump
+```
+
 Execute o exemplo 
 ```
 $ vendor/adrianodemoura/php_console/bin/execute exemplo teste1 teste2
