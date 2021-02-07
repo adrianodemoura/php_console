@@ -9,15 +9,16 @@ if ( is_dir(APP."/src/Console") )
 	throw new Exception( "O Projeto já foi iniciado seu animal !", 1);
 }
 
-if ( exec("cat composer.json | grep 'adrianodemoura/php_console' | wc -l") > 0 )
+if ( exec("ls -1d ".APP." | wc -l") > 2 )
 {
-	throw new Exception("O Compośer já foi atualizado, a instalação de novo projeto não pode continuar.", 2);
+	throw new Exception("O Projeto já foi inicial, é perigoso iniciar um novo !", 2);
 }
 
 exec("cp ".APP."/vendor/adrianodemoura/php_console/examples/project/.gitignore ".APP);
 
 // create tmp directory
 exec("mkdir -p ".APP."/tmp");
+exec("touch ".APP."/tmp/empty");
 exec("setfacl -R -m g:www-data:rwX,d:g:www-data:rwX tmp/");
 
 // create exemple console
