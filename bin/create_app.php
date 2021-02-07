@@ -22,7 +22,7 @@ class Exemplo extends Console {
 
 	public function execute()
 	{
-		gravaLog( $this->getParams(), 'parametros' );
+		gravaLog( $ this->getParams(), 'parametros' );
 
 		success('veja o resultado do script no diretório tmp');
 	}
