@@ -1,8 +1,9 @@
 #!/usr/bin/php -q
 <?php
 
-define( 'DS', DIRECTORY_SEPARATOR );
-define( 'APP', str_replace( ['/Utility', '/src', '/bin', '/adrianodemoura', '/vendor', '/php_console'], '', __DIR__ ) );
+if ( !defined('DS') )  define( 'DS', DIRECTORY_SEPARATOR );
+if ( !defined('APP') ) define( 'APP', str_replace( ['/Utility', '/src', '/bin', '/adrianodemoura', '/vendor', '/php_console'], '', __DIR__ ) );
+if ( !defined('TMP') ) define( 'TMP', APP.'/tmp' );
 
 require APP . '/vendor/autoload.php';
 require APP . '/vendor/adrianodemoura/php_console/src/Utility/global.php';
@@ -21,5 +22,5 @@ try
 
 } catch ( Exception $e )
 {
-	error( $e->getMessage() );
+	error('error: ' . $e->getMessage() );
 }

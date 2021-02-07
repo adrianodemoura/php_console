@@ -114,7 +114,7 @@ class Mysql extends PDO {
         $_lista = $this->query( "show tables" )->fetchAll();
         $lista  = [];
 
-        foreach( $_lista as $_l => $_prop ) { $lista[] = $_prop['Tables_in_aapt']; }
+        foreach( $_lista as $_l => $_prop ) { $lista[] = $_prop['Tables_in_'.$this->baseConfig['database']]; }
 
         return $lista;
     }

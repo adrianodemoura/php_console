@@ -1,8 +1,9 @@
 #!/usr/bin/php -q
 <?php
 
-define( 'DS', DIRECTORY_SEPARATOR );
-define( 'APP', str_replace( ['/Utility', '/src', '/bin', '/adrianodemoura', '/vendor', '/php_console'], '', __DIR__ ) );
+if ( !defined('DS') )  define( 'DS', DIRECTORY_SEPARATOR );
+if ( !defined('APP') ) define( 'APP', str_replace( ['/Utility', '/src', '/bin', '/adrianodemoura', '/vendor', '/php_console'], '', __DIR__ ) );
+if ( !defined('TMP') ) define( 'TMP', APP.'/tmp' );
 
 if ( is_dir(APP."/src/Console") )
 {

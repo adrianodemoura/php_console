@@ -54,7 +54,7 @@ function dd($d='')
  */
 function gravaLog($conteudo='', $nomeLog='log', $tipo='w')
 {
-    $fp = fopen( APP . DS . 'tmp' . DS . $nomeLog.'.log', $tipo);
+    $fp = fopen( TMP . DS . $nomeLog.'.log', $tipo);
 
     ob_start();
 
