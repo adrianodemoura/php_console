@@ -12,6 +12,10 @@ if ( is_dir(APP."/src/Console") )
 // copy gitignore
 exec("cp ".APP."/vendor/adrianodemoura/php_console/examples/project/.gitignore ".APP);
 
+// create tmp directory
+exec("mkdir -p ".APP."/tmp");
+exec("setfacl -R -m g:www-data:rwX,d:g:www-data:rwX tmp/");
+
 // create exemple console
 exec("mkdir -p ".APP."/src/Console/Exemplo");
 exec("cp ".APP."/vendor/adrianodemoura/php_console/examples/project/Exemplo.php ".APP."/src/Console/Exemplo");
