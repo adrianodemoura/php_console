@@ -12,7 +12,7 @@ Execute o comando para criar o projeto
 $ vendor/adrianodemoura/php_console/bin/create_app.php
 ```
 
-Não esqueça de acrescentar as linhas no seu composer.json
+Certifique-se que o arquivo `composer.json` tem algo parecido como abaixo:
 ```
     "autoload": {
         "psr-4": {
@@ -21,7 +21,7 @@ Não esqueça de acrescentar as linhas no seu composer.json
         }
     }
 ```   
-e executar:
+Lemprese que toda vez que incluir algum projeto novo usando `compser require` é preciso executar:
 ```
 $ composer dump
 ```
