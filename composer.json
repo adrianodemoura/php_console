@@ -4,10 +4,9 @@
     "homepage": "phpconsole.deskfacil.com",
     "type": "project",
     "license": "MIT",
-    "require": {
-        "php": ">=7.0",
-    },
-    "authors": [
+    "require": { "php": ">=5.3.2" },
+    "author": 
+    [
         {
             "name": "Adriano Moura",
             "email": "adrianodemoura@gmail.com"
