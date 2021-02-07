@@ -1,7 +1,7 @@
 {
     "name": "adrianodemoura/php_console",
     "description": "Executáel do adrianode moura",
-    "homepage": "phpconsole.deskfacil.com",
+    "homepage": "https://github.com/adrianodemoura/php_console",
     "type": "project",
     "license": "MIT",
     "require": { "php": ">=5.3.2" },
