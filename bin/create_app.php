@@ -6,10 +6,14 @@ define( 'APP', str_replace( ['/Utility', '/src', '/bin', '/adrianodemoura', '/ve
 
 if ( is_dir(APP."/src/Console") )
 {
-	throw new Exception( "O Projeto já foi iniciado seu animal !");
+	throw new Exception( "O Projeto já foi iniciado seu animal !", 1);
 }
 
-// copy gitignore
+if ( exec("cat composer.json | grep 'adrianodemoura/php_console' | wc -l") > 0 )
+{
+	throw new Exception("O Compośer já foi atualizado, a instalação de novo projeto não pode continuar.", 2);
+}
+
 exec("cp ".APP."/vendor/adrianodemoura/php_console/examples/project/.gitignore ".APP);
 
 // create tmp directory
@@ -20,7 +24,7 @@ exec("setfacl -R -m g:www-data:rwX,d:g:www-data:rwX tmp/");
 exec("mkdir -p ".APP."/src/Console/Exemplo");
 exec("cp ".APP."/vendor/adrianodemoura/php_console/examples/project/Exemplo.php ".APP."/src/Console/Exemplo");
 
-// copy composer project
+// copy composer project, if not exists
 exec("cp ".APP."/vendor/adrianodemoura/php_console/examples/project/composer.json ".APP);
 
 // update composer
