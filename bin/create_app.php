@@ -22,9 +22,9 @@ class Exemplo extends Console {
 
 	public function execute()
 	{
-		gravaLog( exec('whoami'), 'quem_sou_eu');
+		gravaLog( $this->getParams(), 'parametros' );
 
-		success('See the result on the tmp directory.');
+		success('veja o resultado do script no diretório tmp');
 	}
 }
 ";

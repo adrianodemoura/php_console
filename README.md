@@ -28,7 +28,7 @@ $ composer dump
 
 Execute o exemplo 
 ```
-$ vendor/adrianodemoura/php_console/bin/execute exemplo teste1 teste2
+$ vendor/adrianodemoura/php_console/bin/execute.php exemplo teste1 teste2
 ```
 
 ## Rodar Script
