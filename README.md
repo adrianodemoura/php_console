@@ -1,2 +1,7 @@
 # php_console
-rodar script php no console
+Crie script PHP para rodar no console
+
+## Instalação pelo composer
+```
+$ composer require adrianodemoura/php_console
+```

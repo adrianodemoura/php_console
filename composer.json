@@ -1,0 +1,17 @@
+{
+    "name": "adrianodemoura/php_console",
+    "description": "Executáel do adrianode moura",
+    "homepage": "phpconsole.deskfacil.com",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.0",
+    },
+    "authors": [
+        {
+            "name": "Adriano Moura",
+            "email": "adrianodemoura@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+}
