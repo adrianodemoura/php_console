@@ -1,4 +1,4 @@
-# php_console
+# PhpConsole
 Crie script PHP para rodar no console
 
 ## Instalação pelo composer
@@ -12,7 +12,7 @@ Execute o comando para criar o projeto
 $ vendor/adrianodemoura/php_console/bin/create_app.php
 ```
 
-Certifique-se que o arquivo `composer.json` tem algo parecido como abaixo:
+Certifique-se que o arquivo `composer.json` possua a chave `autoload` como abaixo:
 ```
     "autoload": {
         "psr-4": {
@@ -21,7 +21,7 @@ Certifique-se que o arquivo `composer.json` tem algo parecido como abaixo:
         }
     }
 ```   
-Lemprese que toda vez que incluir algum projeto novo usando `compser require` é preciso executar:
+Lembrese que toda vez que incluir algum projeto novo usando `compser require` é preciso executar:
 ```
 $ composer dump
 ```
