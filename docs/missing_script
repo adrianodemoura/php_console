@@ -1,0 +1,8 @@
+
+Informe o nome do Script a ser executado e/ou seus parâmetros
+
+exemplo:
+
+	$ bin/execute.php script param1 param2 paramN
+
+* os Scripts devem estar no diretório src/Console

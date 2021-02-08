@@ -8,9 +8,9 @@ class Exemplo extends Console {
 
 	public function execute()
 	{
-		gravaLog( $this->getParams(), 'parametros' );
+		gravaLog( $this->getParams(), 'resultado_script_exemplo' );
 
-		success('veja o resultado do script no diretório tmp');
+		success('veja o resultado em '.TMP.'/resultado_script_exemplo');
 	}
 }
 
