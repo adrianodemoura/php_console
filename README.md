@@ -26,7 +26,7 @@ Lembrese que toda vez que incluir algum projeto novo usando `compser require` é
 $ composer dump
 ```
 
-Execute o exemplo 
+## Execute o exemplo 
 ```
 $ vendor/adrianodemoura/php_console/bin/execute.php exemplo teste1 teste2
 ```
