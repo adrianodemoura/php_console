@@ -17,7 +17,7 @@ if ( exec("ls -1d ".APP." | wc -l") > 2 )
 }
 
 // create bin directory
-exec("cp ".APP."/vendor/adrianodemoura/php_console/examples/project/bin ".APP);
+exec("cp -r ".APP."/vendor/adrianodemoura/php_console/examples/project/bin ".APP);
 
 // create gitignore file
 exec("cp ".APP."/vendor/adrianodemoura/php_console/examples/project/.gitignore ".APP);
