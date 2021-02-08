@@ -1,8 +1,15 @@
 <?php
 
-if ( !defined('DIR_PHP_CONSOLE') ) define( 'DIR_PHP_CONSOLE', str_replace( ['/src', '/bin', '/vendor'], '', __DIR__ ) );
+if ( !defined('DIR_PHP_CONSOLE') ) define( 'DIR_PHP_CONSOLE', dirname( __DIR__ ) );
+if ( !defined('DIR_APP') )
+{
+	if ( strpos( DIR_PHP_CONSOLE, 'adrianodemoura') > -1 )
+		define( 'DIR_APP', str_replace( ['/adrianodemoura', '/php_console', '/vendor'], '', DIR_PHP_CONSOLE ) );
+	else 
+		define( 'DIR_APP', DIR_PHP_CONSOLE );
+}
 
-require DIR_PHP_CONSOLE . '/vendor/autoload.php';
+require DIR_APP . '/vendor/autoload.php';
 require DIR_PHP_CONSOLE . '/src/Core/Config/bootstrap.php';
 require DIR_PHP_CONSOLE . '/src/Core/Utility/global.php';
 
