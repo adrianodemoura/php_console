@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace PhpConsole\Console\Exemplo;
 
-use PhpConsole\Core\Console\Console;
+use CorePhpConsole\Console\Console;
 
 class Exemplo extends Console {
 

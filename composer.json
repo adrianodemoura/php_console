@@ -20,7 +20,8 @@
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "PhpConsole\\": "src/"
+            "PhpConsole\\": "src/",
+            "CorePhpConsole\\": "src/Core/"
         }
     }
 }

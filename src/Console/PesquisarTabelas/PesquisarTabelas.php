@@ -1,14 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace PhpConsole\Console\PesquisaTabelas;
+namespace PhpConsole\Console\PesquisarTabelas;
 
 use PhpConsole\Core\Console\Console;
 use PhpConsole\Core\Database\Mysql;
 use PDO;
 use Exception;
 
-class PesquisaTabelas extends Console {
+class PesquisarTabelas extends Console {
 
 	public function execute()
 	{

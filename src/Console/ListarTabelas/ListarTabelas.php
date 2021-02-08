@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace PhpConsole\Console\ListaTabelas;
+namespace PhpConsole\Console\ListarTabelas;
 
 use PhpConsole\Core\Console\Console;
 use PhpConsole\Core\Database\Mysql;
 use Exception;
 
-class ListaTabelas extends Console {
+class ListarTabelas extends Console {
 
 	public function execute()
 	{
@@ -16,7 +16,7 @@ class ListaTabelas extends Console {
 			'host' 		=> 'localhost',
 			'database'	=> 'mysql',
 			'username' 	=> 'root',
-			'password' 	=> ''
+			'password' 	=> '381313'
 		];
 		$nameLog 	= "lista_tabelas_do_banco_".$config['database'];
 		$Mysql 		= new Mysql( $config );

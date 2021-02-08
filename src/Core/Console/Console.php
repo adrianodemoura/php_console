@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace PhpConsole\Core\Console;
+namespace CorePhpConsole\Console;
 
 class Console {
 
