@@ -1,6 +1,4 @@
 #!/usr/bin/php -q
 <?php
 
-if ( !defined('APP') ) define( 'APP', str_replace( ['/src', '/bin', '/adrianodemoura', '/vendor', '/php_console'], '', __DIR__ ) );
-
-require APP . '/vendor/adrianodemoura/php_console/bin/execute_script.php';
+require dirname( __DIR__ ) . '/bin/execute_script.php';

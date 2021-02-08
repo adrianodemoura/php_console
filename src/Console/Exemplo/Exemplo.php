@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Console\Exemplo;
+namespace PhpConsole\Console\Exemplo;
 use PhpConsole\Core\Console\Console;
 
 class Exemplo extends Console {

@@ -1,10 +1,10 @@
 <?php
 
-if ( !defined('APP') ) define( 'APP', str_replace( ['/src', '/bin', '/adrianodemoura', '/vendor', '/php_console'], '', __DIR__ ) );
+if ( !defined('DIR_PHP_CONSOLE') ) define( 'DIR_PHP_CONSOLE', str_replace( ['/src', '/bin', '/vendor'], '', __DIR__ ) );
 
-require APP . '/vendor/autoload.php';
-require APP . '/vendor/adrianodemoura/php_console/src/Core/Config/bootstrap.php';
-require APP . '/vendor/adrianodemoura/php_console/src/Core/Utility/global.php';
+require DIR_PHP_CONSOLE . '/vendor/autoload.php';
+require DIR_PHP_CONSOLE . '/src/Core/Config/bootstrap.php';
+require DIR_PHP_CONSOLE . '/src/Core/Utility/global.php';
 
 try
 {
@@ -20,7 +20,7 @@ try
 		throw new Exception("Script inválido", 2);
 	}
 
-	$class 		= "\\App\\Console\\{$scriptConsole}\\{$scriptConsole}";
+	$class 		= "\\PhpConsole\\Console\\{$scriptConsole}\\{$scriptConsole}";
 
     $script 	= new $class();
 
@@ -31,11 +31,11 @@ try
 	switch ( $e->getCode() )
 	{
 		case 1:
-			require APP . '/vendor/adrianodemoura/php_console/docs/help/help';
+			require DIR_PHP_CONSOLE . '/docs/help/help';
 			break;
 		case 2:
 			error( 'error: '. $e->getMessage() );
-			require APP . '/vendor/adrianodemoura/php_console/docs/help/missing_script';
+			require DIR_PHP_CONSOLE . '/docs/help/missing_script';
 			break;
 		
 		default:
