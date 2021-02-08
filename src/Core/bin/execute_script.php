@@ -2,10 +2,6 @@
 
 require dirname( __DIR__ ) . '/src/Core/Config/bootstrap.php';
 
-require DIR_APP . '/vendor/autoload.php';
-require DIR_PHP_CONSOLE . '/src/Core/Config/bootstrap.php';
-require DIR_PHP_CONSOLE . '/src/Core/Utility/global.php';
-
 try
 {
 	$scriptConsole = isset( $_SERVER['argv'][1] ) ? camelize( $_SERVER['argv'][1] ) : '';

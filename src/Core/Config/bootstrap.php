@@ -20,3 +20,9 @@ if ( !defined('TMP') )
 
 if ( !defined('DS') )  define( 'DS', DIRECTORY_SEPARATOR );
 
+
+require DIR_APP . '/vendor/autoload.php';
+
+require DIR_PHP_CONSOLE . '/src/Core/Config/bootstrap.php';
+
+require DIR_PHP_CONSOLE . '/src/Core/Utility/global.php';
