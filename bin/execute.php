@@ -1,18 +1,24 @@
-#!/usr/bin/php -q
 <?php
 
-if ( !defined('DS') )  define( 'DS', DIRECTORY_SEPARATOR );
 if ( !defined('APP') ) define( 'APP', str_replace( ['/Utility', '/src', '/bin', '/adrianodemoura', '/vendor', '/php_console'], '', __DIR__ ) );
-if ( !defined('TMP') ) define( 'TMP', APP.'/tmp' );
 
 require APP . '/vendor/autoload.php';
+require APP . '/vendor/adrianodemoura/php_console/config/bootstrap.php';
 require APP . '/vendor/adrianodemoura/php_console/src/Utility/global.php';
 
 try
 {
 	$scriptConsole = isset( $_SERVER['argv'][1] ) ? camelize( $_SERVER['argv'][1] ) : '';
 
-	if ( empty($scriptConsole) ) exit( "script inválido");
+	if ( in_array( strtolower( @$_SERVER['argv'][1] ), ['--help', '-h', '-help'] ) )
+	{
+		throw new Exception( 'printar ajuda', 1);
+	}
+
+	if ( empty($scriptConsole) )
+	{
+		throw new Exception("Script inválido", 2);
+	}
 
 	$class 		= "\\App\\Console\\{$scriptConsole}\\{$scriptConsole}";
 
@@ -22,5 +28,18 @@ try
 
 } catch ( Exception $e )
 {
-	error('error: ' . $e->getMessage() );
+	switch ( $e->getCode() )
+	{
+		case 1:
+			require APP . '/vendor/adrianodemoura/php_console/docs/help';
+			break;
+		case 2:
+			error( 'error: '. $e->getMessage() );
+			require APP . '/vendor/adrianodemoura/php_console/docs/missing_script';
+			break;
+		
+		default:
+			error('error: ' . $e->getMessage() );
+			break;
+	}
 }

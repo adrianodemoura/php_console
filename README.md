@@ -28,10 +28,10 @@ $ composer dump
 
 ## Execute o exemplo 
 ```
-$ vendor/adrianodemoura/php_console/bin/execute.php exemplo teste1 teste2
+$ bin/execute.php exemplo teste1 teste2
 ```
 
 ## Rodar Script
 ```
-vendor/adrianodemoura/php_console/bin/execute script param1 param2 param3
+bin/execute.php script param1 param2 param3
 ```

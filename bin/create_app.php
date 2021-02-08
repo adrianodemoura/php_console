@@ -1,9 +1,10 @@
 #!/usr/bin/php -q
 <?php
 
-if ( !defined('DS') )  define( 'DS', DIRECTORY_SEPARATOR );
 if ( !defined('APP') ) define( 'APP', str_replace( ['/Utility', '/src', '/bin', '/adrianodemoura', '/vendor', '/php_console'], '', __DIR__ ) );
-if ( !defined('TMP') ) define( 'TMP', APP.'/tmp' );
+
+require APP . '/vendor/adrianodemoura/php_console/config/bootstrap.php';
+
 
 if ( is_dir(APP."/src/Console") )
 {
@@ -12,9 +13,13 @@ if ( is_dir(APP."/src/Console") )
 
 if ( exec("ls -1d ".APP." | wc -l") > 2 )
 {
-	throw new Exception("O Projeto já foi inicial, é perigoso iniciar um novo !", 2);
+	throw new Exception("O Projeto já foi iniciado, é perigoso iniciar um novo !", 2);
 }
 
+// create bin directory
+exec("cp ".APP."/vendor/adrianodemoura/php_console/examples/project/bin ".APP);
+
+// create gitignore file
 exec("cp ".APP."/vendor/adrianodemoura/php_console/examples/project/.gitignore ".APP);
 
 // create tmp directory
