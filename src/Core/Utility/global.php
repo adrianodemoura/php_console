@@ -38,11 +38,11 @@ function debug($d='', $trace=true)
  * @param   string  $d Mensagem
  * @return  void
  */
-function dd($d='') 
+/*function dd($d='') 
 {
     debug( $d );
     die("==\n");
-}
+}*/
 
 /**
  * Escreve um Log no diretório temporário

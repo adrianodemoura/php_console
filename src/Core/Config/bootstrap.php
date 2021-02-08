@@ -1,6 +1,7 @@
-#!/usr/bin/php -q
 <?php
 
 if ( !defined('APP') ) define( 'APP', str_replace( ['/src', '/bin', '/adrianodemoura', '/vendor', '/php_console'], '', __DIR__ ) );
 
-require APP . '/vendor/adrianodemoura/php_console/bin/execute_script.php';
+if ( !defined('DS') )  define( 'DS', DIRECTORY_SEPARATOR );
+
+if ( !defined('TMP') ) define( 'TMP', APP . '/tmp' );

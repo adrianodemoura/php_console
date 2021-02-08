@@ -1,10 +1,10 @@
 <?php
 
-if ( !defined('APP') ) define( 'APP', str_replace( ['/Utility', '/src', '/bin', '/adrianodemoura', '/vendor', '/php_console'], '', __DIR__ ) );
+if ( !defined('APP') ) define( 'APP', str_replace( ['/src', '/bin', '/adrianodemoura', '/vendor', '/php_console'], '', __DIR__ ) );
 
 require APP . '/vendor/autoload.php';
-require APP . '/vendor/adrianodemoura/php_console/config/bootstrap.php';
-require APP . '/vendor/adrianodemoura/php_console/src/Utility/global.php';
+require APP . '/vendor/adrianodemoura/php_console/src/Core/Config/bootstrap.php';
+require APP . '/vendor/adrianodemoura/php_console/src/Core/Utility/global.php';
 
 try
 {
@@ -31,11 +31,11 @@ try
 	switch ( $e->getCode() )
 	{
 		case 1:
-			require APP . '/vendor/adrianodemoura/php_console/docs/help';
+			require APP . '/vendor/adrianodemoura/php_console/docs/help/help';
 			break;
 		case 2:
 			error( 'error: '. $e->getMessage() );
-			require APP . '/vendor/adrianodemoura/php_console/docs/missing_script';
+			require APP . '/vendor/adrianodemoura/php_console/docs/help/missing_script';
 			break;
 		
 		default:
