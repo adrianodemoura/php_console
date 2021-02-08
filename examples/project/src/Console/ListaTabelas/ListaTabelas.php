@@ -13,9 +13,9 @@ class ListaTabelas extends Console {
 		$config =
 		[
 			'host' 		=> 'localhost',
-			'username' 	=> 'aapt',
-			'password' 	=> 'aapt',
-			'database'	=> 'aapt'
+			'database'	=> 'mysql',
+			'username' 	=> 'root',
+			'password' 	=> ''
 		];
 		$nameLog 	= "lista_tabelas_do_banco_".$config['database'];
 		$Mysql 		= new Mysql( $config );

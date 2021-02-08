@@ -15,8 +15,8 @@ class PesquisaTabelas extends Console {
 		[
 			'host' 		=> 'localhost',
 			'username' 	=> 'root',
-			'password' 	=> '381313',
-			'database'	=> 'mysql'
+			'database'	=> 'mysql',
+			'password' 	=> ''
 		];
 		$nameLog 	= "lista_tabelas_do_banco_".$config['database'];
 		$Mysql 		= new Mysql( $config );

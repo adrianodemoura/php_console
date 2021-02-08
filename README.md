@@ -9,7 +9,7 @@ $ composer require adrianodemoura/php_console
 ## Criar Projeto
 Execute o comando para criar o projeto
 ```
-$ vendor/adrianodemoura/php_console/bin/create_app.php
+$ vendor/adrianodemoura/php_console/bin/create_app
 ```
 
 Certifique-se que o arquivo `composer.json` possua a chave `autoload` como abaixo:
@@ -28,10 +28,10 @@ $ composer dump
 
 ## Execute o exemplo 
 ```
-$ bin/execute.php exemplo teste1 teste2
+$ bin/execute exemplo teste1 teste2
 ```
 
 ## Rodar Script
 ```
-bin/execute.php script param1 param2 param3
+bin/execute script param1 param2 param3
 ```

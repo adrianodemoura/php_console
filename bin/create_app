@@ -17,7 +17,10 @@ if ( exec("ls -1d ".APP." | wc -l") > 2 )
 }
 
 // create bin directory
-exec("cp -r ".APP."/vendor/adrianodemoura/php_console/examples/project ".APP);
+exec("cp -r ".APP."/vendor/adrianodemoura/php_console/examples/project/* ".APP);
+
+// copy hidden files
+exec("cp -r ".APP."/vendor/adrianodemoura/php_console/examples/project/. ".APP);
 
 // create tmp directory
 exec("mkdir -p ".APP."/tmp");
