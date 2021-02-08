@@ -1,9 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Console\PesquisaTabelas;
-use PhpConsole\Console\Console;
-use PhpConsole\Database\Mysql;
+namespace PhpConsole\Console\PesquisaTabelas;
+
+use PhpConsole\Core\Console\Console;
+use PhpConsole\Core\Database\Mysql;
 use PDO;
 use Exception;
 

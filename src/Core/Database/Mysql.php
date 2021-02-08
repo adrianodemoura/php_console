@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
-namespace PhpConsole\Database;
-use PhpConsole\Database\Field;
+namespace PhpConsole\Core\Database;
+use PhpConsole\Core\Database\Field;
 use Exception;
 use PDO;
 

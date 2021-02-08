@@ -1,9 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Console\ListaTabelas;
-use PhpConsole\Console\Console;
-use PhpConsole\Database\Mysql;
+namespace PhpConsole\Console\ListaTabelas;
+
+use PhpConsole\Core\Console\Console;
+use PhpConsole\Core\Database\Mysql;
 use Exception;
 
 class ListaTabelas extends Console {
