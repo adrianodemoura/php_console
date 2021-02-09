@@ -16,7 +16,26 @@ try
 		throw new Exception("Script inválido", 2);
 	}
 
-	$class 		= "\\PhpConsole\\Console\\{$scriptConsole}\\{$scriptConsole}";
+	// src
+	$arquivo 	= DIR_PHP_CONSOLE . "/src/Console/{$scriptConsole}/{$scriptConsole}.php";
+	if ( file_exists( $arquivo ) )
+	{
+		$class = "\\PhpConsole\\Console\\{$scriptConsole}\\{$scriptConsole}";
+	} else
+	{
+		// plugin
+		$arquivo = DIR_PHP_CONSOLE . "/src/plugins/{pluginName}/src/Console/{$scriptConsole}/{$scriptConsole}.php";
+		if ( !file_exists( $arquivo ) )
+		{
+			// Core
+			$arquivo = DIR_PHP_CONSOLE . "/src/Core/Console/{$scriptConsole}/{$scriptConsole}.php";
+			if ( !file_exists( $arquivo ) )
+			{
+				throw new Exception( "Não foi possível localizar o script {$scriptConsole}");
+			}
+			$class = "\\PhpConsole\\Core\\Console\\{$scriptConsole}\\{$scriptConsole}";
+		}
+	}
 
     $script 	= new $class();
 

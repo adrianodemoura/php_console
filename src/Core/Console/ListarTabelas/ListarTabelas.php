@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace PhpConsole\Console\ListarTabelas;
+namespace PhpConsole\Core\Console\ListarTabelas;
 
 use PhpConsole\Core\Console\Console;
 use PhpConsole\Core\Database\Mysql;
@@ -25,7 +25,7 @@ class ListarTabelas extends Console {
 
 		gravaLog( $arrTabelas, $nameLog );
 
-		success(" A lista de tabelas foi gravada em ".TMP."/$nameLog" );
+		success(" A lista de tabelas foi gravada em ".TMP."/$nameLog.log" );
 	}
 }
 

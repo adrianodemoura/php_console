@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace PhpConsole\Console\PesquisarTabelas;
+namespace PhpConsole\Core\Console\PesquisarTabelas;
 
 use PhpConsole\Core\Console\Console;
 use PhpConsole\Core\Database\Mysql;
