@@ -21,7 +21,7 @@
     "autoload": {
         "psr-4": {
             "PhpConsole\\": "src/",
-            "CorePhpConsole\\": "src/Core/"
+            "PhpConsole\\Core\\": "src/Core/"
         }
     }
 }

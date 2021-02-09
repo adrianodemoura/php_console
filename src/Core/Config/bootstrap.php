@@ -1,5 +1,6 @@
 <?php
 
+
 if ( !defined('DIR_PHP_CONSOLE') ) define( 'DIR_PHP_CONSOLE', str_replace( ['/src', '/Core'], '', dirname( __DIR__ ) ) );
 
 if ( !defined('DIR_APP') )
@@ -22,7 +23,5 @@ if ( !defined('DS') )  define( 'DS', DIRECTORY_SEPARATOR );
 
 
 require DIR_APP . '/vendor/autoload.php';
-
-require DIR_PHP_CONSOLE . '/src/Core/Config/bootstrap.php';
 
 require DIR_PHP_CONSOLE . '/src/Core/Utility/global.php';

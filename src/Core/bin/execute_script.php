@@ -1,6 +1,6 @@
 <?php
 
-require dirname( __DIR__ ) . '/src/Core/Config/bootstrap.php';
+require dirname( __DIR__ ) . '/Config/bootstrap.php';
 
 try
 {

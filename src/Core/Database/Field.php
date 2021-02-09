@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace CorePhpConsole\Database;
+namespace PhpConsole\Core\Database;
 
 class Field {
 
