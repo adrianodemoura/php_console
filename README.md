@@ -35,3 +35,8 @@ $ bin/execute exemplo teste1 teste2
 ```
 bin/execute script param1 param2 param3
 ```
+
+## Criar novo script de console
+```
+bin/execute create_console nome_do_novo_script_console
+```
