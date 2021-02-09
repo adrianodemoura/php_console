@@ -13,4 +13,3 @@ $ bin/execute create_console NomeDoScriptConsole
 para executá-lo basta:
 
 $ bin/execute nome_do_script_console
-
