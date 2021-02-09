@@ -2,5 +2,15 @@
 PhpConsole por Adriano Moura
 --------------------------------
 
-Uso: $ bin/execute script parametro1 parametro2 parametroN
+: Como executar um script console ?
+
+$ bin/execute script parametro1 parametro2 parametroN
+
+: Como criar um novo script console ?
+
+$ bin/execute create_console NomeDoScriptConsole
+
+para executá-lo basta:
+
+$ bin/execute nome_do_script_console
 
