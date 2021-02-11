@@ -25,29 +25,19 @@ class Mysql extends PDO {
     public function __construct( array $config=[] )
     {
 
-        $this->baseConfig['host']      = isset( $config['host'] ) 
-            ? $config['host'] 
-            : 'localhost';
+        $this->baseConfig['host']      = isset( $config['host'] )       ? $config['host']       : 'localhost';
 
-        $this->baseConfig['username']  = isset( $config['username'] )
-            ? $config['username'] 
-            : '';
+        $this->baseConfig['username']  = isset( $config['username'] )   ? $config['username']   : '';
 
-        $this->baseConfig['password']  = isset( $config['password'] )
-            ? $config['password'] 
-            : '';
+        $this->baseConfig['password']  = isset( $config['password'] )   ? $config['password']   : '';
 
-        $this->baseConfig['database']  = isset( $config['database'] )
-            ? $config['database'] 
-            : '';
+        $this->baseConfig['database']  = isset( $config['database'] )   ? $config['database']   : '';
 
-        $this->baseConfig['port']      = isset( $config['port'] )
-            ? $config['port'] 
-            : 3306;
+        $this->baseConfig['port']      = isset( $config['port'] )       ? $config['port']       : 3306;
 
-        $this->baseConfig['init']      = isset( $config['init'] )
-            ? $config['init']
-            : '';
+        $this->baseConfig['init']      = isset( $config['init'] )       ? $config['init']       : '';
+
+        if ( empty($this->baseConfig['database']) ) $this->baseConfig = $this->getConfigDatabase();
 
         $this->initDb();
     }
@@ -117,5 +107,13 @@ class Mysql extends PDO {
         foreach( $_lista as $_l => $_prop ) { $lista[] = $_prop['Tables_in_'.$this->baseConfig['database']]; }
 
         return $lista;
+    }
+
+    public function getConfigDatabase()
+    {
+
+        $confiDb = [];
+
+        return $configDb;
     }
 }

@@ -5,6 +5,7 @@ namespace PhpConsole\Core\Console\CreateConsole;
 
 use PhpConsole\Core\Console\Console;
 use PhpConsole\Core\Database\Mysql;
+use PhpConsole\Core\Utility\Inflector;
 use Exception;
 
 class CreateConsole extends Console {
@@ -17,7 +18,7 @@ class CreateConsole extends Console {
 
 		if ( strlen($scriptConsole) < 6 ) throw new Exception( "O Nome do novo console deve ter ao menos 5 caracteres !" );
 
-		$scriptConsole = camelize( $scriptConsole );
+		$scriptConsole = Inflector::camelize( $scriptConsole );
 
 		exec( "mkdir -p ".DIR_PHP_CONSOLE."/src/Console/{$scriptConsole}");
 

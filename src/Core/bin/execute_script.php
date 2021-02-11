@@ -2,9 +2,11 @@
 
 require dirname( __DIR__ ) . '/Config/bootstrap.php';
 
+use PhpConsole\Core\Utility\Inflector;
+
 try
 {
-	$scriptConsole = isset( $_SERVER['argv'][1] ) ? camelize( $_SERVER['argv'][1] ) : '';
+	$scriptConsole = isset( $_SERVER['argv'][1] ) ? Inflector::camelize( $_SERVER['argv'][1] ) : '';
 
 	if ( in_array( strtolower( @$_SERVER['argv'][1] ), ['--help', '-h', '-help'] ) )
 	{
