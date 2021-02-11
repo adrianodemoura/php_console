@@ -112,7 +112,23 @@ class Mysql extends PDO {
     public function getConfigDatabase()
     {
 
-        $confiDb = [];
+        $configDb = [];
+
+        if ( defined('DRUPAL_ROOT') )
+        {
+            $dbDrupal = new \Drupal\Core\Database\Database();
+
+            $infoDb = $dbDrupal->getConnectionInfo();
+
+            gravaLog( $infoDb, 'info_database' );
+
+        }
+
+        if ( defined('CAKE') )
+        {
+
+        }
+
 
         return $configDb;
     }
