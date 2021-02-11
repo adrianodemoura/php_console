@@ -18,7 +18,9 @@ class ListarTabelas extends Console {
 			'username' 	=> 'root',
 			'password' 	=> '381313'
 		];
+
 		$nameLog 	= "lista_tabelas_do_banco_".$config['database'];
+
 		$Mysql 		= new Mysql( $config );
 
 		$arrTabelas = $Mysql->allTables();
